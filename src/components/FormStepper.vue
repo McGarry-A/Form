@@ -9,7 +9,8 @@ import FormStep from './FormStep.vue';
 import { TabInterface } from '../types/tabs.interface';
 
 interface Props {
-  tabs: TabInterface[]
+  tabs: TabInterface[];
+  index: number;
 }
 
 const props = defineProps<Props>()

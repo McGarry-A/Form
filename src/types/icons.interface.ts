@@ -1,0 +1,1 @@
+export type IconType = "Controller" | "Remote" | "Profile"
