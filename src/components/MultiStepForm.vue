@@ -4,54 +4,16 @@
   >
     <form-stepper :tabs="tabs" />
 
-<<<<<<< Updated upstream
-    <component :is="getActiveTab()" class="flex h-full justify-center items-center flex-1 pr-20" />
-=======
     <transition name="fade" mode="out-in">
         <component :is="getActiveTab(index)"  :key="index" class="flex h-full justify-center items-center flex-1 pr-20 py-8"
           @handleNextStep="handleNextStep()" @handleGoBack="handleGoBack()"/>
     </transition>
->>>>>>> Stashed changes
   </div>
 </template>
 
 <script setup lang="ts">
 import FormStepper from "./FormStepper.vue";
 import StepOne from "./StepOne.vue";
-<<<<<<< Updated upstream
-import { ref, provide } from "vue";
-
-const getActiveTab = () => {
-  return StepOne;
-};
-
-const tabs = ref([
-  {
-    title: "Your Info",
-    stepNumber: 1,
-    isActive: true,
-    id: 1,
-  },
-  {
-    title: "Select Plan",
-    stepNumber: 2,
-    isActive: false,
-    id: 2,
-  },
-  {
-    title: "Add-Ons",
-    stepNumber: 3,
-    isActive: false,
-    id: 3,
-  },
-  {
-    title: "Summary",
-    stepNumber: 4,
-    isActive: false,
-    id: 4,
-  },
-]);
-=======
 import StepTwo from "./StepTwo.vue";
 import StepThree from "./StepThree.vue";
 
@@ -89,7 +51,6 @@ const handleNextStep = () => {
   }
   updateStepper()
 }
->>>>>>> Stashed changes
 
 provide('tabs', tabs)
 </script>
