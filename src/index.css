@@ -2,21 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer utilities {
-    .body--sm {
-        @apply text-sm font-normal font-primary
-    }
+  .body--sm {
+    @apply text-sm font-normal font-primary;
+  }
 
-    .body--md {
-        @apply text-md font-normal font-primary
-    }
+  .body--md {
+    @apply text-md font-normal font-primary;
+  }
 
-    .body--lg {
-        @apply text-lg font-normal font-primary
-    }
+  .body--lg {
+    @apply text-lg font-normal font-primary;
+  }
 
-    .heading {
-        @apply text-xl font-bold font-primary
-    }
+  .heading {
+    @apply text-xl font-bold font-primary;
+  }
 }

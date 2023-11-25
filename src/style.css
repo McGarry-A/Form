@@ -1,0 +1,4 @@
+body,
+html {
+  @apply bg-bg-color h-screen w-screen;
+}
