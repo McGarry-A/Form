@@ -1,7 +1,7 @@
 <template>
   <div class="flex gap-4  items-center">
     <div
-      class=" w-8 h-8 rounded-full border-1 border flex justify-center items-center font-bold "
+      class=" w-8 h-8 rounded-full border-1 border flex justify-center items-center font-bold transition duration-150"
       :class="{'bg-sky-blue border-sky-blue text-denim': props.isActive, 'bg-transparent text-white border-white':!props.isActive}"
       >
       {{ props.stepNumber }}

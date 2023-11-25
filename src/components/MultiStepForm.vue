@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="max-w-5xl w-full bg-white rounded-lg h-[560px] m-auto p-4 shadow-lg flex gap-24"
-  >
+  <div class="max-w-5xl w-full bg-white rounded-lg h-[560px] m-auto p-4 shadow-lg flex gap-24">
     <form-stepper :tabs="tabs" />
 
     <transition name="fade" mode="out-in">
@@ -12,6 +10,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+import { tabs } from "../data/tabs"
 import FormStepper from "./FormStepper.vue";
 import StepOne from "./StepOne.vue";
 import StepTwo from "./StepTwo.vue";
@@ -52,5 +52,8 @@ const handleNextStep = () => {
   updateStepper()
 }
 
-provide('tabs', tabs)
+const handleGoBack = () => {
+  index.value -= 1
+  updateStepper()
+}
 </script>

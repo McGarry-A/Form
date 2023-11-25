@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <div class="w-full">
+        <div class="w-full h-full flex flex-col">
             <div class="flex flex-col gap-1">
                 <h1 class="heading">Personal Info</h1>
                 
@@ -13,7 +13,7 @@
                 <form-input label="Phone Number" placeholder="07907733824" />
             </div>
 
-            <div class="flex justify-end mt-14">
+            <div class="flex justify-end mt-auto">
                 <button-selector type="secondary" @click="handleNextStep()">Next Step</button-selector>
             </div>
         </div>
@@ -24,7 +24,11 @@
 import FormInput from './FormInput.vue';
 import ButtonSelector from './ButtonSelector.vue';
 
+type EmitType = (e: "handleNextStep") => void
+
+const emit = defineEmits<EmitType>()
+
 const handleNextStep = () => {
-    console.log("Next")
+    emit("handleNextStep")
 }
 </script>
